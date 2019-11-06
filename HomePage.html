@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        17GIS A-Z Dictionary首页
+    </title>
+    <meta charset="utf-8">
+    <link href="style/pc7.css" rel="stylesheet" />
+    <!--整饰自己的css失败link href="style/homepageStyle.css" rel="stylesheet" /-->
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script src="script/funcBlock.js">
+    </script>
+    <script src="script/typeText.js">
+    </script>
+    <script src="script/jQueryAjax.js">
+    </script>
+    </meta>
+</head>
+
+<body>
+    <div id="margin1">
+    </div>
+    <div id="logo">
+        <div class="logo">
+        </div>
+    </div>
+    <div id="margin2">
+    </div>
+    <div id="search">
+        <div class="wrap">
+            <form action="results.php" id="form" method="GET">
+                <!--这里加了action="results.php"，但没有submit类型，所以不会发送表单出去 -->
+                <!--  method为GET的表单，action="/search"  -->
+                <img alt="有道图标" class="logo" src="source/youdao_logo.png">
+                <div id="selectType" onclick="typeListDisplay()">
+                    <!--调用js-->
+                    <!--函数后面加括号()！！！！！-->
+                    <div id="type" name="languageType">
+                        英英
+                    </div>
+                    <div class="side">
+                        1
+                    </div>
+                    <span class="arrow" id="arrowIcon">
+                    </span>
+                    <ul id="typeList">
+                        <li>
+                            英英
+                        </li>
+                        <li>
+                            英汉
+                        </li>
+                    </ul>
+                </div>
+                <div id="border">
+                    <input id="translateType" name="le" type="text" value="eng">
+                    <input autocomplete="off" id="translateContent" maxlength="256" name="q" onfocus="this.select()" onmouseover="this.focus()" placeholder="在此输入要查询的单词或词组" type="text">
+                    <input name="keyfrom" type="hidden" value="dict2.index">
+                    <!--不要了<span id="hnwBtn" class="hand-write"></span>-->
+                    </input>
+                    </input>
+                    </input>
+                </div>
+                <button type="button">
+                    查询
+                </button>
+                <!---尝试用js实现正则表达式判断合法性弹窗警告---->
+                <!--jQueryAjax不用onclick="showMeaning()"-->
+                <!--这里用type="button"阻止了form的自动提交，只用ajax提交表单-->
+                <!--若button按钮没有type属性，浏览器默认按照type=submit逻辑处理-->
+                </img>
+            </form>
+        </div>
+    </div>
+    <div id="margin3">
+        <span>
+            <a target="_blank">
+                周三上午GIS专业英语
+            </a>
+        </span>
+        <span>
+            <a target="_blank">
+                每周的念想就是课后的三分钟小视频
+            </a>
+        </span>
+        <span>
+            <a href="https://support.esri.com/en/other-resources/gis-dictionary" target="_blank">
+                点击查看单词本
+            </a>
+        </span>
+        <span class="ugc-link">
+            <a>
+                为什么还要背专业词汇嘤嘤嘤
+            </a>
+        </span>
+    </div>
+    <div id="margin4">
+    </div>
+    <!-- 这里的style实现了div中的placeholder -->
+    <style type="text/css">
+    .input {
+        width: 200px;
+        height: 30px;
+        border: 1px solid grey;
+    }
+
+    /* 这里的style实现了div中的placeholder */
+    .placeholderDiv:empty::before {
+        color: lightgrey;
+        content: attr(placeholder);
+    }
+    </style>
+    <div class="placeholderDiv" id="meaning" placeholder="查询得到的结果将会在这里显示。英文解释来源于Esri官网，汉语翻译来源于有道词典机器翻译。开发小哥的数据库不是根据官网单词本创建的，所以存在一定的单词疏漏，敬请谅解！"><!--这里的div一定避免出现换行，否则将不能显示placeholder--></div>
+</body>
+
+</html>
