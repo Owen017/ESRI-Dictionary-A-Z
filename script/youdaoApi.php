@@ -4,8 +4,8 @@
 //定义常量，常量名不需要加美元符号
 define("CURL_TIMEOUT", 2000);
 define("URL", "https://openapi.youdao.com/api");
-define("APP_KEY", "7ceac15636decb35"); // 应用ID
-define("SEC_KEY", "TmenIggYaXp1onB8zzuckE9EoHq23nSh"); // 应用密钥
+define("APP_KEY", "xxxxxxxxxx"); // 应用ID
+define("SEC_KEY", "xxxxxxxxxxxxxxxxxx"); // 应用密钥
 
 function do_request($q)
 {

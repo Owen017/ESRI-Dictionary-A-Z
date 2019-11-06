@@ -15,7 +15,7 @@ $lt   = $_GET['languageType']; //languageType缩写lt
 //$lt = "英英";
 
 //数据库select
-@$db = new mysqli('localhost', 'root', '', 'gisdictionary');
+@$db = new mysqli('localhost', 'xxx','xxx', 'gisdictionary');
 if (mysqli_connect_errno()) {
     die("Could not connect to database.<br/>Please try again later.");
 }
