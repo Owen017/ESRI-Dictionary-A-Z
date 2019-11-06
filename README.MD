@@ -1,5 +1,5 @@
-###ESRI DICTIONARY A-Z 在线查询网页  
-#####实时记录：2019/11/7，初代版本网站完成，未加载至服务器。  
+### ESRI DICTIONARY A-Z 在线查询网页  
+##### 实时记录：2019/11/7，初代版本网站完成，未加载至服务器。  
 **主要文件：**
 - /HomePage.html            # 主页面
 - /script/funcBlock.js      # js实现id=typeList下拉列表框css中display属性的none,block转换以及小箭头翻转
