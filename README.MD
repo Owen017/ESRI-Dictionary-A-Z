@@ -8,3 +8,4 @@
 - /script/results.php       # 使用PHP通过MySQL数据库查询并返回数据；嵌入api翻译获取的数据
 - /script/youdaoApi.php     # 使用PHP调用有道api
 - /style/pc7.css            # 拷贝并增添修改有道官网的css
+- /WhereDoesTheDataComeFrom # 三段python代码记录了数据的来源：网络爬虫、数据清洗及数据库存储
